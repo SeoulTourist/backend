@@ -1,14 +1,14 @@
 const dotenv = require("dotenv");
 const path = require("path");
-const env = require("./properties/Config.json");
 
-let configData =
-  env.local.trim() == "development"
-    ? require("./properties/LocalConfig.json")
-    : require("./properties/ServerConfig.json");
 
-dotenv.config({ path: path.join(__dirname, configData.dir) });
+// let configData =
+//   env.local.trim() == "development"
+//     ? require("./properties/LocalConfig.json")
+//     : require("./properties/ServerConfig.json");
 
+// dotenv.config({ path: path.join(__dirname, configData.dir) });
+dotenv.config();
 module.exports = {
   development: {
     client: "mysql2",
