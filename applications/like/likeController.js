@@ -4,18 +4,7 @@ const { select } = require("../../db/knex");
 
 let likeController = {};
 
-// likeController.create = function (req, res) {
-//   knex("destination")
-//     .insert({
-//       destName: req.body.params.destinationName,
-//       destDescription: req.body.params.description,
-//       destId: req.body.params.Id || 1,
-      
-//     })
-//     .then(() => {
-//       res.send("A destination is created");
-//     });
-// };
+
 
 likeController.create = async (req, res) => {
     const { contentId} = req.body;
